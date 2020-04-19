@@ -6,10 +6,185 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-color: #FAFAFA;
+	font-family: 'Open Sans', sans-serif;
+}
 
+button {
+	background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
 
+.container {
+	width: 92%;
+	margin: 0 auto;
+}
 
+@media screen and (min-width: 728px) {
+	.container {
+		width: 728px;
+	}
+}
 
+.header {
+	padding: 8px 16px;
+	left: 0;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+	background-color: white;
+}
 
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+}
 
+.header__logo {
+	height: 40px;
+	/* elementos um ao lado do outro (inline) e possibilidade de definir altura/largura (block) */
+	display: inline-block; 
+}
 
+.header_img {
+	height: 100%;
+}
+
+.header__icon {
+	border: none;
+	background-color: transparent;
+}
+
+.stories {
+	display: flex;
+	padding: 16px 8px;
+	overflow: auto;
+}
+
+.stories__thumbnail {
+	height: 78px;
+	min-width: 78px;
+	overflow: hidden;
+	margin-right: 16px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	border: 2px solid rgba(0, 0, 0, .1);
+}
+
+.stories__thumbnail img {
+	height: 72px;
+	width: 72px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+
+.stories__thumbnail--hasNew {
+	border: 3px solid transparent;
+	background-image: linear-gradient(white, white), radial-gradient(circle at top left, rgba(245,160,77,1), rgba(160,15,139,1));
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+}
+
+.card {
+	background-color: white;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 10px;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.card__figure {
+	width: 100%;
+	margin: 0;
+}
+
+.card__figure img {
+	width: 100%;
+}
+
+.card__header {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px;
+}
+
+.card__user {
+	display: inline-flex;
+	align-items: center;
+	justify-items: center;
+}
+
+.card__thumbnail {
+	text-decoration: none;
+	z-index: 2;
+	position: relative;
+}
+
+.card__likes__thumbnails .card__thumbnail:last-child {
+	margin-left: -30px;
+	z-index: 1;
+	position: relative;
+}
+
+.card__thumbnail img {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	margin-right: 8px;
+}
+
+.card__thumbnail--mulitple img {
+	border: 3px solid rgba(242, 242, 242, 1);
+}
+
+.card__username {
+    text-decoration: none;
+	color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+	
+.card__morebutton {
+	font-size: 14px;
+}
+
+.card__actions {
+	display: flex;
+	padding: 8px;
+}
+
+.card__action {
+	font-size: 24px;
+	margin-right: 16px;
+}
+
+.card__action:focus {
+	outline:0;
+}
+
+.card__action .fas {
+	color: #ed4956;
+}
+
+.card__action:last-of-type {
+    justify-self: flex-end;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.card__likes {
+	background-color: rgba(0, 0, 0, 0.05);
+	display: flex;
+	font-size: 12px;
+	align-items: center;
+	padding: 8px;
+}
+
+.card__likes span a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+}
